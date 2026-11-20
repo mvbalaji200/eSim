@@ -1,0 +1,24 @@
+ghdl-4.1.0 successfully extracted
+Changing directory to ghdl-4.1.0 installation
+Configuring ghdl-4.1.0 build as per requirements
+gcc (Ubuntu 14.2.0-19ubuntu2) 14.2.0
+Copyright (C) 2024 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Use full IEEE library
+Build machine is: x86_64-linux-gnu
+Unhandled version llvm 20.1.2
+
+
+Error! Kindly resolve above error(s) and try again.
+
+Aborting Installation...
+
+./install-eSim.sh: line 62: /: Is a directory
+./install-eSim.sh: line 63: /: Is a directory
+./install-eSim.sh: line 64: /: Is a directory
+./install-eSim.sh: line 65: /: Is a directory
+./install-eSim.sh: line 66: /: Is a directory
+./install-eSim.sh: line 67: /: Is a directory
+./install-eSim.sh: line 68: /: Is a directory

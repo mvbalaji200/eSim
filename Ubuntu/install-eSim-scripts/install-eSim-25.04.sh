@@ -63,7 +63,7 @@ function installNghdl
 {
 
     echo "Installing NGHDL..........................."
-    unzip -o nghdl.zip
+    # unzip -o nghdl.zip
     cd nghdl/
     chmod +x install-nghdl.sh
 
@@ -133,7 +133,7 @@ function installKicad
                 fi
             else
                 echo "KiCad 8.0 is already installed."
-                exit 0
+                return 0 #changed to return 0 to resume install
             fi
         fi
 

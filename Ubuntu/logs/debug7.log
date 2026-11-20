@@ -1,0 +1,15 @@
+cannot run /usr/bin/llvm-config
+
+
+Error! Kindly resolve above error(s) and try again.
+
+Aborting Installation...
+
+./install-eSim.sh: line 62: /: Is a directory
+./install-eSim.sh: line 63: /: Is a directory
+./install-eSim.sh: line 64: /: Is a directory
+./install-eSim.sh: line 65: /: Is a directory
+./install-eSim.sh: line 66: /: Is a directory
+./install-eSim.sh: line 67: /: Is a directory
+./install-eSim.sh: line 68: /: Is a directory
+balaji@U25:~/eSim-2.5$ 
