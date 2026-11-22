@@ -6,15 +6,15 @@
 | **Email** | mvbalaji200@gmail.com |
 
 Test Environment:
-Static hostname: U25
-Icon name: computer-laptop
-Chassis: laptop
-Boot ID: 482aaf9c0f8e4679a677812c0a223580
-Operating System: Ubuntu 25.04
-Kernel: Linux 6.14.0-37-generic
-Architecture: x86-64
-Hardware Vendor: ASUSTeK COMPUTER INC.
-Hardware Model: ZenBook UX325SA_UM325SA
+  Static hostname: U25
+  Icon name: computer-laptop
+  Chassis: laptop
+  Boot ID: 482aaf9c0f8e4679a677812c0a223580
+  Operating System: Ubuntu 25.04
+  Kernel: Linux 6.14.0-37-generic
+  Architecture: x86-64
+  Hardware Vendor: ASUSTeK COMPUTER INC.
+  Hardware Model: ZenBook UX325SA_UM325SA
 
 ## Bugs Encountered
 
