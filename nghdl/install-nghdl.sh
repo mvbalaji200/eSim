@@ -43,7 +43,7 @@ run_version_script() {
         "23.04")
             SCRIPT="$SCRIPT_DIR/install-nghdl-23.04.sh"
             ;;
-        "24.04")
+        "25.04")
             SCRIPT="$SCRIPT_DIR/install-nghdl-24.04.sh"
             ;;
         *)
