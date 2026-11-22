@@ -18,13 +18,16 @@ class TerminalUi(QtWidgets.QMainWindow):
         super(TerminalUi, self).__init__()
 
         # Other variables
+        base_dir = os.path.dirname(os.path.abspath(__file__))
         self.darkColor = True
         self.qProcess = qProcess
         self.args = args
-        self.iconDir = "../../images"
+        self.iconDir = os.path.abspath(os.path.join(base_dir, "../../images"))
+        # self.iconDir = "../../images"
 
         # Load the ui file
-        uic.loadUi("TerminalUi.ui", self)
+        uic.loadUi(os.path.join(base_dir, "TerminalUi.ui"), self)
+        #uic.loadUi("TerminalUi.ui", self)
 
         # Define Our Widgets
         self.progressBar = self.findChild(

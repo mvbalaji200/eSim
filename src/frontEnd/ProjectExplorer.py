@@ -105,7 +105,9 @@ class ProjectExplorer(QtWidgets.QWidget):
 
     def openMenu(self, position):
         indexes = self.treewidget.selectedIndexes()
-        if len(indexes) > 0:
+        if not indexes: 
+            return
+        #if len(indexes) > 0:
             level = 0
             index = indexes[0]
             while index.parent().isValid():
@@ -134,8 +136,18 @@ class ProjectExplorer(QtWidgets.QWidget):
         )
 
         if (os.path.isfile(str(self.filePath))):
-            self.fopen = open(str(self.filePath), 'r')
-            lines = self.fopen.read()
+            # self.fopen = open(str(self.filePath), 'r')
+            # lines = self.fopen.read()
+            try:
+                with open(str(self.filePath), 'r', encoding='utf-8') as f:
+                    lines = f.read()
+            except UnicodeDecodeError:
+                QtWidgets.QMessageBox.warning(
+                    self,
+                    "Unsupported File Format",
+                    f"Cannot open binary or non-UTF-8 file '{filename}' in the text editor."
+                )
+                return
 
             self.textwindow = QtWidgets.QWidget()
             self.textwindow.setMinimumSize(600, 500)
