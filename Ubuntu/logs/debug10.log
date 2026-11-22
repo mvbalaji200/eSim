@@ -1,0 +1,388 @@
+installed esim 
+
+esim
+Starting eSim......
+Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
+QTextBrowser: No document for file:///home/balaji/eSim-2.5/src/browser/library/browser/welcome.html
+Function : Create workspace
+/home/balaji/eSim-Workspace
+Function: Open Kicad to Ngspice Converter
+Function : Validating for Kicad components
+No new project created
+Function : Open Project
+Function: Validating Open Project Information
+True
+Function: Open Kicad to Ngspice Converter
+Function : Validating for Kicad components
+==================================
+Kicad to Ngspice netlist converter
+==================================
+- /home/fossee/UpdatedExamples/Half_Adder/Half_Adder.cir
+
+- EESchema Netlist Version 1.1 (Spice format) creation date: Thu Mar  3 21:35:33 2016
+
+- To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+- To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+- Sheet Name: /
+X1  Net-_U1-Pad3_ Net-_U1-Pad4_ Net-_U2-Pad1_ Net-_U2-Pad2_ half_adder		
+U1  IN1 IN2 Net-_U1-Pad3_ Net-_U1-Pad4_ adc_bridge_2		
+U2  Net-_U2-Pad1_ Net-_U2-Pad2_ sum cout dac_bridge_2		
+v1  IN1 GND DC		
+v2  IN2 GND DC		
+R1  sum GND 1k		
+R2  cout GND 1k		
+U3  IN1 plot_v1		
+U4  IN2 plot_v1		
+U5  sum plot_v1		
+U6  cout plot_v1		
+
+.end
+Start Parsing Previous Values XML                                 for ngspice model : ['../../library/modelParamXML/Hybrid/adc_bridge_2.xml']
+UnknownModelList Used in the Schematic []
+=====================================================
+Multiple Model XML file with same name  []
+=====================================================
+Start Parsing Previous Values XML                                 for ngspice model : ['../../library/modelParamXML/Hybrid/dac_bridge_2.xml']
+UnknownModelList Used in the Schematic []
+=====================================================
+Multiple Model XML file with same name  []
+=====================================================
+UnknownModelList Used in the Schematic []
+=====================================================
+Multiple Model XML file with same name  []
+=====================================================
+UnknownModelList Used in the Schematic []
+=====================================================
+Multiple Model XML file with same name  []
+=====================================================
+UnknownModelList Used in the Schematic []
+=====================================================
+Multiple Model XML file with same name  []
+=====================================================
+UnknownModelList Used in the Schematic []
+=====================================================
+Multiple Model XML file with same name  []
+=====================================================
+=============================================================
+convertICIntoBasicBlocks called, from Processing
+=============================================================
+SCHEMATICINFO ['x1  net-_u1-pad3_ net-_u1-pad4_ net-_u2-pad1_ net-_u2-pad2_ half_adder', '* u1  in1 in2 net-_u1-pad3_ net-_u1-pad4_ adc_bridge_2', '* u2  net-_u2-pad1_ net-_u2-pad2_ sum cout dac_bridge_2', 'v1  in1 gnd dc', 'v2  in2 gnd dc', 'r1  sum gnd 1k', 'r2  cout gnd 1k', '* u3  in1 plot_v1', '* u4  in2 plot_v1', '* u5  sum plot_v1', '* u6  cout plot_v1', 'a1 [in1 in2 ] [net-_u1-pad3_ net-_u1-pad4_ ] u1', 'a2 [net-_u2-pad1_ net-_u2-pad2_ ] [sum cout ] u2']
+OUTPUTOPTION []
+MODELLIST [[1, 'u1  in1 in2 net-_u1-pad3_ net-_u1-pad4_ adc_bridge_2', 'adc_bridge', 'u1', '* Schematic Name:                             adc_bridge_2, Ngspice Name: adc_bridge', 'Add Parameters for ADC u1', 'Hybrid', {'in_low:1.0': 'Enter value for in_low (default=1.0)', 'in_high:2.0': 'Enter value for in_high (default=2.0)', 'rise_delay:1.0e-9': 'Enter Rise Delay (default=1.0e-9)', 'fall_delay:1.0e-9': 'Enter Fall Delay (default=1.0e-9)'}], [2, 'u2  net-_u2-pad1_ net-_u2-pad2_ sum cout dac_bridge_2', 'dac_bridge', 'u2', '* Schematic Name:                             dac_bridge_2, Ngspice Name: dac_bridge', 'Add Parameters for DAC u2', 'Hybrid', {'out_low:0.0': 'Enter value for out_low (default=0.0)', 'out_high:5.0': 'Enter value for out_high (default=5.0)', 'out_undef:0.5': 'Enter value for out_undef (default=0.5)', 'input_load:1.0e-12': 'Enter value for input load (default=1.0e-12)', 't_rise:1.0e-9': 'Enter the Rise Time (default=1.0e-9)', 't_fall:1.0e-9': 'Enter the Fall Time (default=1.0e-9)'}]]
+UNKOWNMODELLIST []
+MULTIPLEMODELLIST []
+PLOTTEST ['plot v(in1)', 'plot v(in2)', 'plot v(sum)', 'plot v(cout)']
+=============================================================
+Analysis file is present
+=========================================================
+Content of Analysis file : .tran 10e-03 100e-03 0e-03
+=========================================================
+SourceList line:  [3, 'v1  in1 gnd dc', 'dc', 'Add parameters for DC source v1', '  Enter value (Volts/Amps): ', '  Enter zero frequency: ']
+SourceList line:  [4, 'v2  in2 gnd dc', 'dc', 'Add parameters for DC source v2', '  Enter value (Volts/Amps): ', '  Enter zero frequency: ']
+Enter value for in_low (default=1.0)
+in_low:1.0
+Enter value for in_high (default=2.0)
+in_high:2.0
+Enter Rise Delay (default=1.0e-9)
+rise_delay:1.0e-9
+Enter Fall Delay (default=1.0e-9)
+fall_delay:1.0e-9
+Enter value for out_low (default=0.0)
+out_low:0.0
+Enter value for out_high (default=5.0)
+out_high:5.0
+Enter value for out_undef (default=0.5)
+out_undef:0.5
+Enter value for input load (default=1.0e-12)
+input_load:1.0e-12
+Enter the Rise Time (default=1.0e-9)
+t_rise:1.0e-9
+Enter the Fall Time (default=1.0e-9)
+t_fall:1.0e-9
+=========================================
+x1  net-_u1-pad3_ net-_u1-pad4_ net-_u2-pad1_ net-_u2-pad2_ half_adder
+=========================================
+- u1  in1 in2 net-_u1-pad3_ net-_u1-pad4_ adc_bridge_2
+=========================================
+- u2  net-_u2-pad1_ net-_u2-pad2_ sum cout dac_bridge_2
+=========================================
+v1  in1 gnd dc
+=========================================
+v2  in2 gnd dc
+=========================================
+r1  sum gnd 1k
+=========================================
+r2  cout gnd 1k
+=========================================
+- u3  in1 plot_v1
+=========================================
+- u4  in2 plot_v1
+=========================================
+- u5  sum plot_v1
+=========================================
+- u6  cout plot_v1
+=========================================
+a1 [in1 in2 ] [net-_u1-pad3_ net-_u1-pad4_ ] u1
+=========================================
+a2 [net-_u2-pad1_ net-_u2-pad2_ ] [sum cout ] u2
+Complete Project Path :  /home/balaji/eSim-2.5/Examples/Half_Adder
+Project Name :  Half_Adder
+NBLIST ['cout', 'in1', 'in2']
+[1, 0]
+Function : Model editor
+in model editor
+Function: Open Kicad to Ngspice Converter
+Function : Validating for Kicad components
+==================================
+Kicad to Ngspice netlist converter
+==================================
+- /home/fossee/UpdatedExamples/Half_Adder/Half_Adder.cir
+
+- EESchema Netlist Version 1.1 (Spice format) creation date: Thu Mar  3 21:35:33 2016
+
+- To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+- To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+- Sheet Name: /
+X1  Net-_U1-Pad3_ Net-_U1-Pad4_ Net-_U2-Pad1_ Net-_U2-Pad2_ half_adder		
+U1  IN1 IN2 Net-_U1-Pad3_ Net-_U1-Pad4_ adc_bridge_2		
+U2  Net-_U2-Pad1_ Net-_U2-Pad2_ sum cout dac_bridge_2		
+v1  IN1 GND DC		
+v2  IN2 GND DC		
+R1  sum GND 1k		
+R2  cout GND 1k		
+U3  IN1 plot_v1		
+U4  IN2 plot_v1		
+U5  sum plot_v1		
+U6  cout plot_v1		
+
+.end
+Start Parsing Previous Values XML                                 for ngspice model : ['../../library/modelParamXML/Hybrid/adc_bridge_2.xml']
+UnknownModelList Used in the Schematic []
+=====================================================
+Multiple Model XML file with same name  []
+=====================================================
+Start Parsing Previous Values XML                                 for ngspice model : ['../../library/modelParamXML/Hybrid/dac_bridge_2.xml']
+UnknownModelList Used in the Schematic []
+=====================================================
+Multiple Model XML file with same name  []
+=====================================================
+UnknownModelList Used in the Schematic []
+=====================================================
+Multiple Model XML file with same name  []
+=====================================================
+UnknownModelList Used in the Schematic []
+=====================================================
+Multiple Model XML file with same name  []
+=====================================================
+UnknownModelList Used in the Schematic []
+=====================================================
+Multiple Model XML file with same name  []
+=====================================================
+UnknownModelList Used in the Schematic []
+=====================================================
+Multiple Model XML file with same name  []
+=====================================================
+=============================================================
+convertICIntoBasicBlocks called, from Processing
+=============================================================
+SCHEMATICINFO ['x1  net-_u1-pad3_ net-_u1-pad4_ net-_u2-pad1_ net-_u2-pad2_ half_adder', '* u1  in1 in2 net-_u1-pad3_ net-_u1-pad4_ adc_bridge_2', '* u2  net-_u2-pad1_ net-_u2-pad2_ sum cout dac_bridge_2', 'v1  in1 gnd dc', 'v2  in2 gnd dc', 'r1  sum gnd 1k', 'r2  cout gnd 1k', '* u3  in1 plot_v1', '* u4  in2 plot_v1', '* u5  sum plot_v1', '* u6  cout plot_v1', 'a1 [in1 in2 ] [net-_u1-pad3_ net-_u1-pad4_ ] u1', 'a2 [net-_u2-pad1_ net-_u2-pad2_ ] [sum cout ] u2']
+OUTPUTOPTION []
+MODELLIST [[1, 'u1  in1 in2 net-_u1-pad3_ net-_u1-pad4_ adc_bridge_2', 'adc_bridge', 'u1', '* Schematic Name:                             adc_bridge_2, Ngspice Name: adc_bridge', 'Add Parameters for ADC u1', 'Hybrid', {'in_low:1.0': 'Enter value for in_low (default=1.0)', 'in_high:2.0': 'Enter value for in_high (default=2.0)', 'rise_delay:1.0e-9': 'Enter Rise Delay (default=1.0e-9)', 'fall_delay:1.0e-9': 'Enter Fall Delay (default=1.0e-9)'}], [2, 'u2  net-_u2-pad1_ net-_u2-pad2_ sum cout dac_bridge_2', 'dac_bridge', 'u2', '* Schematic Name:                             dac_bridge_2, Ngspice Name: dac_bridge', 'Add Parameters for DAC u2', 'Hybrid', {'out_low:0.0': 'Enter value for out_low (default=0.0)', 'out_high:5.0': 'Enter value for out_high (default=5.0)', 'out_undef:0.5': 'Enter value for out_undef (default=0.5)', 'input_load:1.0e-12': 'Enter value for input load (default=1.0e-12)', 't_rise:1.0e-9': 'Enter the Rise Time (default=1.0e-9)', 't_fall:1.0e-9': 'Enter the Fall Time (default=1.0e-9)'}]]
+UNKOWNMODELLIST []
+MULTIPLEMODELLIST []
+PLOTTEST ['plot v(in1)', 'plot v(in2)', 'plot v(sum)', 'plot v(cout)']
+=============================================================
+Analysis file is present
+=========================================================
+Content of Analysis file : .tran 10e-03 100e-03 0e-03
+=========================================================
+SourceList line:  [3, 'v1  in1 gnd dc', 'dc', 'Add parameters for DC source v1', '  Enter value (Volts/Amps): ', '  Enter zero frequency: ']
+SourceList line:  [4, 'v2  in2 gnd dc', 'dc', 'Add parameters for DC source v2', '  Enter value (Volts/Amps): ', '  Enter zero frequency: ']
+Enter value for in_low (default=1.0)
+in_low:1.0
+Enter value for in_high (default=2.0)
+in_high:2.0
+Enter Rise Delay (default=1.0e-9)
+rise_delay:1.0e-9
+Enter Fall Delay (default=1.0e-9)
+fall_delay:1.0e-9
+Enter value for out_low (default=0.0)
+out_low:0.0
+Enter value for out_high (default=5.0)
+out_high:5.0
+Enter value for out_undef (default=0.5)
+out_undef:0.5
+Enter value for input load (default=1.0e-12)
+input_load:1.0e-12
+Enter the Rise Time (default=1.0e-9)
+t_rise:1.0e-9
+Enter the Fall Time (default=1.0e-9)
+t_fall:1.0e-9
+=========================================
+x1  net-_u1-pad3_ net-_u1-pad4_ net-_u2-pad1_ net-_u2-pad2_ half_adder
+=========================================
+- u1  in1 in2 net-_u1-pad3_ net-_u1-pad4_ adc_bridge_2
+=========================================
+- u2  net-_u2-pad1_ net-_u2-pad2_ sum cout dac_bridge_2
+=========================================
+v1  in1 gnd dc
+=========================================
+v2  in2 gnd dc
+=========================================
+r1  sum gnd 1k
+=========================================
+r2  cout gnd 1k
+=========================================
+- u3  in1 plot_v1
+=========================================
+- u4  in2 plot_v1
+=========================================
+- u5  sum plot_v1
+=========================================
+- u6  cout plot_v1
+=========================================
+a1 [in1 in2 ] [net-_u1-pad3_ net-_u1-pad4_ ] u1
+=========================================
+a2 [net-_u2-pad1_ net-_u2-pad2_ ] [sum cout ] u2
+Complete Project Path :  /home/balaji/eSim-2.5/Examples/Half_Adder
+Project Name :  Half_Adder
+NBLIST ['cout', 'in1', 'in2']
+[1, 0]
+Complete Project Path :  /home/balaji/eSim-2.5/Examples/Half_Adder
+Project Name :  Half_Adder
+NBLIST ['cout', 'in1', 'in2']
+[1, 0]
+Function : Subcircuit editor
+Function : Makerchip and Verilator to Ngspice Converter
+0
+==================================
+Makerchip and Verilog to Ngspice Converter
+==================================
+<maker.Maker.Maker object at 0x7e52c155ef90>
+Function : NGHDL
+Worker Thread Calling Command : nghdl -e
+/home/balaji/eSim-2.5/nghdl/src/model_generation.py:46: SyntaxWarning: invalid escape sequence '\('
+  item = re.sub("\(", " ", item, flags=re.I)      # noqa
+/home/balaji/eSim-2.5/nghdl/src/model_generation.py:47: SyntaxWarning: invalid escape sequence '\)'
+  item = re.sub("\)", " ", item, flags=re.I)      # noqa
+QSocketNotifier: Can only be used with threads started with QThread
+Initializing..........
+
+Please note that the following codes are copyrighted under BSD license.
+
+src/ghdlserver/ghdlserver.c
+src/ghdlserver/ghdlserver.h
+src/ghdlserver/Utility_Package.vhdl
+src/ghdlserver/Vhpi_Package.vhdl
+
+Copyright 2015  Prof.M.P Desai (madhav@ee.iitb.ac.in) and Powai Labs.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDERS AND CONTRIBUTORS  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+Function : NGHDL
+Worker Thread Calling Command : nghdl -e
+QSocketNotifier: Can only be used with threads started with QThread
+Initializing..........
+
+Please note that the following codes are copyrighted under BSD license.
+
+src/ghdlserver/ghdlserver.c
+src/ghdlserver/ghdlserver.h
+src/ghdlserver/Utility_Package.vhdl
+src/ghdlserver/Vhpi_Package.vhdl
+
+Copyright 2015  Prof.M.P Desai (madhav@ee.iitb.ac.in) and Powai Labs.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDERS AND CONTRIBUTORS  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+Function : NGHDL
+Worker Thread Calling Command : nghdl -e
+QSocketNotifier: Can only be used with threads started with QThread
+Initializing..........
+
+Please note that the following codes are copyrighted under BSD license.
+
+src/ghdlserver/ghdlserver.c
+src/ghdlserver/ghdlserver.h
+src/ghdlserver/Utility_Package.vhdl
+src/ghdlserver/Vhpi_Package.vhdl
+
+Copyright 2015  Prof.M.P Desai (madhav@ee.iitb.ac.in) and Powai Labs.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDERS AND CONTRIBUTORS  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+Function : OMOptim
+Traceback (most recent call last):
+  File "/home/balaji/eSim-2.5/src/ngspicetoModelica/ModelicaUI.py", line 134, in callConverter
+    modelicaCompInit, numNodesSub = obj_NgMoConverter.compInit(
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        compInfo,
+        ^^^^^^^^^
+    ...<5 lines>...
+        inbuiltModelDict
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/balaji/eSim-2.5/src/ngspicetoModelica/NgspicetoModelica.py", line 768, in compInit
+    start = self.mappingData["Models"][actualModelName]["import"]
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'adc_bridge'
+================
+Function : Model editor
+in model editor
+Traceback (most recent call last):
+  File "/home/balaji/eSim-2.5/src/frontEnd/Application.py", line 282, in plotFlagPopBox
+    self.open_ngspice()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/home/balaji/eSim-2.5/src/frontEnd/Application.py", line 483, in open_ngspice
+    self.obj_Mainview.obj_dockarea.ngspiceEditor(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        projName, ngspiceNetlist, self.simulationEndSignal, self.plotFlag)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/balaji/eSim-2.5/src/frontEnd/DockArea.py", line 137, in ngspiceEditor
+    NgspiceWidget(netlist, simEndSignal, plotFlag)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/balaji/eSim-2.5/src/ngspiceSimulation/NgspiceWidget.py", line 23, in __init__
+    self.terminalUi = TerminalUi.TerminalUi(self.process, self.args)
+                      ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/balaji/eSim-2.5/src/frontEnd/TerminalUi.py", line 27, in __init__
+    uic.loadUi("TerminalUi.ui", self)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/balaji/.esim/env/lib/python3.13/site-packages/PyQt5/uic/__init__.py", line 241, in loadUi
+    return DynamicUILoader(package).loadUi(uifile, baseinstance, resource_suffix)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/balaji/.esim/env/lib/python3.13/site-packages/PyQt5/uic/Loader/loader.py", line 66, in loadUi
+    return self.parse(filename, resource_suffix)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/balaji/.esim/env/lib/python3.13/site-packages/PyQt5/uic/uiparser.py", line 1020, in parse
+    document = parse(filename)
+  File "/usr/lib/python3.13/xml/etree/ElementTree.py", line 1204, in parse
+    tree.parse(source, parser)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/xml/etree/ElementTree.py", line 558, in parse
+    source = open(source, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'TerminalUi.ui'
+/usr/bin/esim: line 4: 73375 Aborted                 (core dumped) python3 Application.py

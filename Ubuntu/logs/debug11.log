@@ -1,0 +1,59 @@
+balaji@U25:~/Desktop$ esim
+Starting eSim......
+Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
+QTextBrowser: No document for file:///home/balaji/eSim-2.5/src/browser/library/browser/welcome.html
+Default workspace selected : /home/balaji/eSim-Workspace
+Function : Open Project
+Function: Validating Open Project Information
+True
+Traceback (most recent call last):
+  File "/home/balaji/eSim-2.5/src/ngspicetoModelica/ModelicaUI.py", line 134, in callConverter
+    modelicaCompInit, numNodesSub = obj_NgMoConverter.compInit(
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        compInfo,
+        ^^^^^^^^^
+    ...<5 lines>...
+        inbuiltModelDict
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/balaji/eSim-2.5/src/ngspicetoModelica/NgspicetoModelica.py", line 768, in compInit
+    start = self.mappingData["Models"][actualModelName]["import"]
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'adc_bridge'
+================
+Traceback (most recent call last):
+  File "/home/balaji/eSim-2.5/src/frontEnd/Application.py", line 282, in plotFlagPopBox
+    self.open_ngspice()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/home/balaji/eSim-2.5/src/frontEnd/Application.py", line 483, in open_ngspice
+    self.obj_Mainview.obj_dockarea.ngspiceEditor(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        projName, ngspiceNetlist, self.simulationEndSignal, self.plotFlag)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/balaji/eSim-2.5/src/frontEnd/DockArea.py", line 137, in ngspiceEditor
+    NgspiceWidget(netlist, simEndSignal, plotFlag)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/balaji/eSim-2.5/src/ngspiceSimulation/NgspiceWidget.py", line 23, in __init__
+    self.terminalUi = TerminalUi.TerminalUi(self.process, self.args)
+                      ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/balaji/eSim-2.5/src/frontEnd/TerminalUi.py", line 27, in __init__
+    uic.loadUi("TerminalUi.ui", self)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/balaji/.esim/env/lib/python3.13/site-packages/PyQt5/uic/__init__.py", line 241, in loadUi
+    return DynamicUILoader(package).loadUi(uifile, baseinstance, resource_suffix)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/balaji/.esim/env/lib/python3.13/site-packages/PyQt5/uic/Loader/loader.py", line 66, in loadUi
+    return self.parse(filename, resource_suffix)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/balaji/.esim/env/lib/python3.13/site-packages/PyQt5/uic/uiparser.py", line 1020, in parse
+    document = parse(filename)
+  File "/usr/lib/python3.13/xml/etree/ElementTree.py", line 1204, in parse
+    tree.parse(source, parser)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/xml/etree/ElementTree.py", line 558, in parse
+    source = open(source, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'TerminalUi.ui'
+/usr/bin/esim: line 4: 82129 Aborted                 (core dumped) python3 Application.py
+balaji@U25:~/Desktop$ 
+

@@ -61,3 +61,74 @@ Bug#7
 
     Aborting Installation...
 Fix Try v18
+
+Bug#8
+    FileNotFoundError: [Errno 2] No such file or directory: 'TerminalUi.ui'
+    /usr/bin/esim: line 4: 82129 Aborted                 (core dumped) python3 Application.py
+    Fix
+        # Other variables
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        self.darkColor = True
+        self.qProcess = qProcess
+        self.args = args
+        self.iconDir = os.path.abspath(os.path.join(base_dir, "../../images"))
+        # self.darkColor = True
+        # self.qProcess = qProcess
+        # self.args = args
+        # self.iconDir = "../../images"
+
+        # Load the ui file
+        uic.loadUi(os.path.join(base_dir, "TerminalUi.ui"), self)
+        #uic.loadUi("TerminalUi.ui", self)
+
+Bug#9
+ ~$ esim
+    Starting eSim......
+    Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
+    QTextBrowser: No document for file:///home/balaji/eSim-2.5/src/browser/library/browser/welcome.html
+    Default workspace selected : /home/balaji/eSim-Workspace
+    Traceback (most recent call last):
+    File "/home/balaji/eSim-2.5/src/frontEnd/ProjectExplorer.py", line 138, in openProject
+        lines = self.fopen.read()
+    File "<frozen codecs>", line 325, in decode
+    UnicodeDecodeError: 'utf-8' codec can't decode byte 0xae in position 464: invalid start byte
+    /usr/bin/esim: line 4: 23869 Aborted                 (core dumped) python3 Application.py
+Fix
+   if (os.path.isfile(str(self.filePath))):
+            # self.fopen = open(str(self.filePath), 'r')
+            # lines = self.fopen.read()
+            try:
+                with open(str(self.filePath), 'r', encoding='utf-8') as f:
+                    lines = f.read()
+            except UnicodeDecodeError:
+                QtWidgets.QMessageBox.warning(
+                    self,
+                    "Unsupported File Format",
+                    f"Cannot open binary or non-UTF-8 file '{filename}' in the text editor."
+                )
+                return
+
+
+Bug#10
+    esim
+    Starting eSim......
+    Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
+    QTextBrowser: No document for file:///home/balaji/eSim-2.5/src/browser/library/browser/welcome.html
+    Default workspace selected : /home/balaji/eSim-Workspace
+    Traceback (most recent call last):
+    File "/home/balaji/eSim-2.5/src/frontEnd/ProjectExplorer.py", line 116, in openMenu
+        if level == 0:
+        ^^^^^
+    UnboundLocalError: cannot access local variable 'level' where it is not associated with a value
+    /usr/bin/esim: line 4: 25091 Aborted                 (core dumped) python3 Application.py
+    balaji@U25:~$ 
+Fix:
+    indexes = self.treewidget.selectedIndexes()
+        if not indexes: 
+            return
+    if len(indexes) > 0:
+            level = 0
+            index = indexes[0]
+            while index.parent().isValid():
+                index = index.parent()
+                level += 1

@@ -1,0 +1,13 @@
+ esim
+Starting eSim......
+Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
+QTextBrowser: No document for file:///home/balaji/eSim-2.5/src/browser/library/browser/welcome.html
+Default workspace selected : /home/balaji/eSim-Workspace
+Traceback (most recent call last):
+  File "/home/balaji/eSim-2.5/src/frontEnd/ProjectExplorer.py", line 116, in openMenu
+    if level == 0:
+       ^^^^^
+UnboundLocalError: cannot access local variable 'level' where it is not associated with a value
+/usr/bin/esim: line 4: 25091 Aborted                 (core dumped) python3 Application.py
+balaji@U25:~$ 
+
