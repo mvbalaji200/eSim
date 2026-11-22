@@ -6,15 +6,15 @@
 | **Email** | mvbalaji200@gmail.com |
 
 Test Environment:
-  Static hostname: U25
-  Icon name: computer-laptop
-  Chassis: laptop
-  Boot ID: 482aaf9c0f8e4679a677812c0a223580
-  Operating System: Ubuntu 25.04
-  Kernel: Linux 6.14.0-37-generic
-  Architecture: x86-64
-  Hardware Vendor: ASUSTeK COMPUTER INC.
-  Hardware Model: ZenBook UX325SA_UM325SA
+  >Static hostname: U25
+  >Icon name: computer-laptop
+  >Chassis: laptop
+  >Boot ID: 482aaf9c0f8e4679a677812c0a223580
+  >Operating System: Ubuntu 25.04
+  >Kernel: Linux 6.14.0-37-generic
+  >Architecture: x86-64
+  >Hardware Vendor: ASUSTeK COMPUTER INC.
+  >Hardware Model: ZenBook UX325SA_UM325SA
 
 ## Bugs Encountered
 
@@ -29,4 +29,4 @@ Test Environment:
 | 5 | [install-nghdl-24.04.sh](https://github.com/mvbalaji200/eSim/blob/installers/nghdl/install-nghdl-scripts/install-nghdl-24.04.sh) | Installer stops after nghdl installation due to llvm version error as 25.04 defaults to v20 ([debug6.log](https://github.com/mvbalaji200/eSim/blob/installers/Ubuntu/logs/debug6.log)) , tried llvm 19 result [debug8.log](https://github.com/mvbalaji200/eSim/blob/installers/Ubuntu/logs/debug8.log)) | Fix: Set script to install llvm-18 at line 58|
 | 6 | [install-nghdl-24.04.sh](https://github.com/mvbalaji200/eSim/blob/installers/nghdl/install-nghdl-scripts/install-nghdl-24.04.sh) | Installer stops due to generic llvm directory name [debug7.log](https://github.com/mvbalaji200/eSim/blob/installers/Ubuntu/logs/debug7.log) | Fix added correct llvm-18 specific path at line 107 leading to successful install [debug9.log](https://github.com/mvbalaji200/eSim/blob/installers/Ubuntu/logs/debug9.log) |
 
-###GUI Bugs
+### GUI Bugs
